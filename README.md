@@ -47,5 +47,7 @@ npm i starter-eleventy
 ## Important Considerations
 1. When copying the project DO NOT INCLUDE the version control in the .git directory. Remember that your new project is going to have it own version control, not the template one!
 2. Remember to keep the order and do the eleventy installation before of copying the template base files
+3. Please note that when installing from NPM maybe the .gitignore hidden file is bypassed. so you have to created and add node_modules folder before your git init.
+
 
 
