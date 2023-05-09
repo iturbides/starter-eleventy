@@ -5,5 +5,7 @@
   "authorUrl": "https://autorwebsite.com",
   "description": "Periodista, escritor y web developer",
   "keywords": "escribir, autoedición, escritura creativa, relatos, blog de escritura",
-  "favicon": "/images/favicon.ico"
+  "favicon": "/images/favicon.ico",
+  "style": "/css/style.css",
+  "stylePrint": "/css/print.css"
 }
