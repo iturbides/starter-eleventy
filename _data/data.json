@@ -1,0 +1,9 @@
+{
+  "name": "Site Name",
+  "url": "https://website.com",
+  "authorName": "Autor Name",
+  "authorUrl": "https://autorwebsite.com",
+  "description": "Periodista, escritor y web developer",
+  "keywords": "escribir, autoedición, escritura creativa, relatos, blog de escritura",
+  "favicon": "/images/favicon.ico"
+}

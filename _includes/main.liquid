@@ -1,0 +1,33 @@
+---
+title: Default title 
+---
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+<meta charset="utf-8">	
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}</title>
+<meta name="description" content="{{ data.description }}">
+<meta name="author" content="{{ data.authorName }}">
+<meta name="keywords" content="{{ data.keywords }}">
+<link rel="icon" href="{{ data.favicon }}" />
+<link rel="stylesheet" href="{{ data.style }}">
+<link rel="stylesheet" href="{{ data.stylePrint }}" media="print">
+  </head>
+
+	<body>
+
+<nav>
+<div class="menu">
+</div>	
+</nav>
+
+    <div class="content">
+    {{ content }}
+    </div>
+
+ <footer>
+ </footer> 
+
+	</body>
+</html>
