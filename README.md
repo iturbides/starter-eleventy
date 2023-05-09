@@ -37,6 +37,13 @@ What Include?
 6. Star your git: git init (make your first commit)
 7. You are ready to begin your design!!!
 
+## Installation
+Just download from Github
+https://github.com/iturbides/starter-eleventy
+
+Or you can installed by terminal directly from NPM with the following command:
+npm i starter-eleventy
+
 ## Important Considerations
 1. When copying the project DO NOT INCLUDE the version control in the .git directory. Remember that your new project is going to have it own version control, not the template one!
 2. Remember to keep the order and do the eleventy installation before of copying the template base files
