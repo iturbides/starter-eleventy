@@ -1,0 +1,11 @@
+{
+  "name": "starter-eleventy",
+  "version": "1.0.0",
+  "description": "Base kit for eleventy but include eleventy",
+  "main": ".eleventy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matias Iturbides",
+  "license": "(MIT)"
+}

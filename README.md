@@ -29,7 +29,7 @@ What Include?
 
 1. Mkdir of your project
 2. Inside the directory install eleventy: npm install @11ty/eleventy --save-dev
-3. Copy the all the files of this Starter project to your new project, meke sure to include the hidden files
+3. Copy the all the files of this Starter project to your new project, meke sure to include the hidden files. You can install files directly from NPMJS: npm i starter-eleventy
 4. Modify the data.json in data folder with your project information
 5. Run the server to generate the files (npx @11/eleventy) after stop the server Ctl-c
 6. Star your git: git init (make your first commit)
