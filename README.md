@@ -1,6 +1,8 @@
-# Starter
+# Starter Eleventy Skeleton
 
 ### An Starter base for Eleventy's projects
+
+## Please note that this project does not include the eleventy installation!
 
 What Include?
 
@@ -22,14 +24,14 @@ What Include?
 8. File main.liquid in include folder with base html skeleton
 9. File index.liquid with empty content
 10. File data.json with project details for the html skeleton
-11. File css with the root base configuration
-12. File css for printing models
+11. File style.css with the root base configuration
+12. File print.css for printing models
 
 ## How to Star
 
 1. Mkdir of your project
 2. Inside the directory install eleventy: npm install @11ty/eleventy --save-dev
-3. Copy the all the files of this Starter project to your new project, meke sure to include the hidden files. You can install files directly from NPMJS: npm i starter-eleventy
+3. Copy the all the files of this Starter project to your new project, meke sure to include the hidden files. You can install files directly from NPMJS: ( npm i starter-eleventy ) or you can also down load the repo from Github
 4. Modify the data.json in data folder with your project information
 5. Run the server to generate the files (npx @11/eleventy) after stop the server Ctl-c
 6. Star your git: git init (make your first commit)
