@@ -6,7 +6,7 @@
 
 What Include?
 
-1. css folter with basic css configuration
+1. css folder with basic css configuration
 2. data folder with json file ready for complementation
 3. images folder with favico example
 4. include folder with main.liquid
