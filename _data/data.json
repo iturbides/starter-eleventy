@@ -6,6 +6,7 @@
   "description": "Periodista, escritor y web developer",
   "keywords": "escribir, autoedición, escritura creativa, relatos, blog de escritura",
   "favicon": "/images/favicon.ico",
+  "mainjs": "/js/main.js",
   "style": "/css/style.css",
   "stylePrint": "/css/print.css"
 }

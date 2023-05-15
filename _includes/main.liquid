@@ -16,18 +16,49 @@ title: Default title
   </head>
 
 	<body>
+    <!-- Responsive menu -->
+  <nav class="nav" id="nav">
+    <a href="#home"><img src="/images/logo.png" alt="your logo description"></a>
+    <a href="#menu-item-1">Menu Item 1</a>
+    <a href="#menu-item-2">Menu Item 2</a>
+    <a href="#menu-item-3">Menu Item 3</a>
+    <a href="javascript:void(0);" id="menu-toggle" onclick="togglemenu()">
+      <div class="bar-1"></div>
+      <div class="bar-2"></div>
+      <div class="bar-3"></div>
+    </a>
+  </nav>
 
-<nav>
-<div class="menu">
-</div>	
-</nav>
-
+  <!-- Main content come here from others pages -->
     <div class="content">
     {{ content }}
     </div>
-
+   
+   <!-- Footer content below -->
  <footer>
- </footer> 
+   <div class="grid-container">
 
-	</body>
+     <div class="column col-4">
+   <h3>Firs column Text</h3>
+   <p>Some text option here abour the project...</p>
+     </div>
+     
+     <div class="column col-3">
+   <h3>Second column Text</h3>
+   <p>You can change this text with some information related to the project...</p>
+     </div>
+     
+     <div class="column col-3">
+   <h3>Third column Text</h3>
+   <a href="#">Who we are</a><br> 
+   <a href="#">Our services</a><br> 
+   <a href="#">Contact us</a><br> 
+     </div>
+
+   </div>
+ </footer> 
+ 
+ <!-- Call the js file -->
+ <script type="text/javascript" src="{{ data.mainjs }}"></script> 
+  </body>
 </html>

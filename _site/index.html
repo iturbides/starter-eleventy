@@ -1,8 +1,34 @@
----
-title: PROJECT TITLE
-layout: main
----
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+<meta charset="utf-8">	
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PROJECT TITLE</title>
+<meta name="description" content="Periodista, escritor y web developer">
+<meta name="author" content="Autor Name">
+<meta name="keywords" content="escribir, autoedición, escritura creativa, relatos, blog de escritura">
+<link rel="icon" href="/images/favicon.ico" />
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/print.css" media="print">
+  </head>
 
+	<body>
+    <!-- Responsive menu -->
+  <nav class="nav" id="nav">
+    <a href="#home"><img src="/images/logo.png" alt="your logo description"></a>
+    <a href="#menu-item-1">Menu Item 1</a>
+    <a href="#menu-item-2">Menu Item 2</a>
+    <a href="#menu-item-3">Menu Item 3</a>
+    <a href="javascript:void(0);" id="menu-toggle" onclick="togglemenu()">
+      <div class="bar-1"></div>
+      <div class="bar-2"></div>
+      <div class="bar-3"></div>
+    </a>
+  </nav>
+
+  <!-- Main content come here from others pages -->
+    <div class="content">
+    
 <h1>Welcolme to this project...</h1>
 <p>In this starter Eleventy project you the followin:</p>
 
@@ -187,3 +213,34 @@ layout: main
 
 </div>
 
+
+    </div>
+   
+   <!-- Footer content below -->
+ <footer>
+   <div class="grid-container">
+
+     <div class="column col-4">
+   <h3>Firs column Text</h3>
+   <p>Some text option here abour the project...</p>
+     </div>
+     
+     <div class="column col-3">
+   <h3>Second column Text</h3>
+   <p>You can change this text with some information related to the project...</p>
+     </div>
+     
+     <div class="column col-3">
+   <h3>Third column Text</h3>
+   <a href="#">Who we are</a><br> 
+   <a href="#">Our services</a><br> 
+   <a href="#">Contact us</a><br> 
+     </div>
+
+   </div>
+ </footer> 
+ 
+ <!-- Call the js file -->
+ <script type="text/javascript" src="/js/main.js"></script> 
+  </body>
+</html>
