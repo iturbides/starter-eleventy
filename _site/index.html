@@ -27,7 +27,7 @@
   </nav>
 
   <!-- Main content come here from others pages -->
-    <div class="content">
+    <div class="be-content">
     
 <h1>Welcolme to this project...</h1>
 <p>In this starter Eleventy project you the followin:</p>
@@ -57,79 +57,88 @@
 	<li>Item article</li>
 	<li>Item article</li>
 </ul>
-<div class="grid-container">
 
-  
-  <div class="column col-3">
-    <h3>Buttons by colors</h3>    
-
-<br>
-<h5>Just Button</h5>
-<button class="button">Button</button>
-<br>
-<br>
-<h5>Blue  Button</h5>
-<button class="button be-blue">Button</button>
-<br>
-<br>
-<h5>Red  Button</h5>
-<button class="button be-red">Button</button>
-<br>
-<br>
-<h5>Orange  Button</h5>
-<button class="button be-orange">Button</button>
-<br>
-<br>
-<h5>Green  Button</h5>
-<button class="button be-green">Button</button>
-<br>
-<br>
-<h5>Yellow  Button</h5>
-<button class="button be-yellow">Button</button>
-<br>
-  
+<div class="be-container">
+  <div class="be-column be-col-4">
+    <h3>Standar Buttons Labels</h3>    
+<button class="be-btn">Button</button>
+<button class="be-btn be-info">Button</button>
+<button class="be-btn be-danger">Button</button>
+<button class="be-btn be-warning">Button</button>
+<button class="be-btn be-success">Button</button>
   </div>
 
 
-  <div class="column col-3">
+  <div class="be-column be-col-4">
+    <h3>Buttons by colors</h3>
+<button class="be-btn be-red">Button</button>
+<button class="be-btn be-blue">Button</button>
+<button class="be-btn be-orange">Button</button>
+<button class="be-btn be-yellow">Button</button>
+<button class="be-btn be-navy">Button</button>
+<button class="be-btn be-dark-grey">Button</button>
+  </div>
+
+
+  <div class="be-column be-col-4">
     <h3>Buttons by Root Classes</h3>
-    
-    <h5>Primary Button</h5>
-<button class="button be-primary">Button</button>
-<br>
-
-    <h5>Primary Rounded Button</h5>
-<button class="button be-primary be-rounded">Button</button>
-<br>
-
-<br>
-<h5>Inverse Button</h5>
-<button class="button be-inverse">Button</button>
-<br>
-
-<br>
-<h5>Danger Button</h5>
-<button class="button be-danger">Button</button>
-<br>
-
-
-<br>
-<h5>Alert Button</h5>
-<button class="button be-alert">Button</button>
-<br>
-
-<br>
-<h5>Primary Hover Button</h5>
-<button class="button be-primary be-hover">Button</button>
-<br>
+<button class="be-btn be-primary">Button</button>
+<button class="be-btn be-primary be-rounded be-hover">Button</button>
+<button class="be-btn be-inverse">Button</button>
+<button class="be-btn be-danger">Button</button>
+<button class="be-btn be-info">Button</button>
+<button class="be-btn be-primary be-hover">Button</button>
   </div>
+
+
 
 </div>
+<!-- End buttons -->
 
 
+<!-- Second Elements Cards -->
+<div class="be-container">
+
+  <div class="be-column be-col-4">
+    <div class="be-card be-size-20 be-align-center">
+  <img src="/images/card.svg" alt="Card Person">
+  <div class="be-card-container">
+    <h4><b>Mary Doe</b></h4>
+    <p>This card use the .be-size-20 class</p>
+  </div>
+</div>
+  </div>
+
+<div class="be-column be-col-4">
+    <div class="be-card be-size-20 be-align-center">
+  <img src="/images/card.svg" alt="Card Person">
+  <div class="be-card-container">
+    <h4><b>Mary Doe</b></h4>
+    <p>This card use the .be-size-20 class</p>
+  </div>
+</div>
+  </div>
+
+<div class="be-column be-col-4">
+    <div class="be-card be-size-20 be-align-center">
+  <img src="/images/card.svg" alt="Card Person">
+  <div class="be-card-container">
+    <h4><b>Mary Doe</b></h4>
+    <p>This card use the .be-size-20 class</p>
+  </div>
+</div>
+  </div>
+
+
+</div>
+<!-- End Cards -->
+
+
+<!-- Table inside container + column + be-col-12 -->
+<div class="be-container">
+  <div class="be-column be-col-12"> 
 <h1>A Fancy Table</h1>
-
-<table id="customers">
+    <table id="customers">
   <tr>
     <th>Company</th>
     <th>Contact</th>
@@ -186,7 +195,10 @@
     <td>France</td>
   </tr>
 </table>
-
+</div>
+</div>
+<!-- End of table -->
+<hr>
 
 <h1>MODAL POPUP</h1>
 
@@ -195,43 +207,42 @@
 <div id="openModal" class="modalDialog">
 	<div>
 		<a href="#close" title="Close" class="close">X</a>
-		<h2>Hey Pablosky</h2>
+
+    <h2>Hey Pablosky</h2>
 		<p>Aquí tienes el modal popup que pone un mensaje cuando se clika.</p>
 		<p>Puedes hacer un montón de cosas aquí, como alertas o incluso crear un formulario de registro aquí mismo.</p>
-	</div>
+
+  </div>
 </div>
 
 <h1>Columns exaple</h1>
-<div class="grid-container">
-  
-  <div class="column col-4 hidden-small">Esta columan debería desparece en pantalla pequeñas</div>
-  <div class="column col-1">TPuedes hacer un montón de cosas aquí, comhis is a column</div>
-<div class="column col-1">TPuedes hacer un montón de cosas aquí, comhis is a column</div>
-  <div class="column col-2">TPuedes hacer un montón de cosas aquí, comhis is a column</div>
-  <div class="column col-1">TPuedes hacer un montón de cosas aquí, comhis is a column</div>
-<div class="column col-1">TPuedes hacer un montón de cosas aquí, comhis is a column</div>
-
+<div class="be-container">
+   <div class="be-column be-col-2 be-red">Esta columan tiene un poco más de contenido</div>
+   <div class="be-column be-col-2 be-blue">Esta columan</div>
+   <div class="be-column be-col-2 be-yellow">Esta columan</div>
 </div>
+
+
 
 
     </div>
    
    <!-- Footer content below -->
- <footer>
-   <div class="grid-container">
+ <footer class="be-footer">
+   <div class="be-container">
 
-     <div class="column col-4">
-   <h3>Firs column Text</h3>
+     <div class="be-column be-col-4">
+   <h3>Firs be-column Text</h3>
    <p>Some text option here abour the project...</p>
      </div>
      
-     <div class="column col-3">
-   <h3>Second column Text</h3>
+     <div class="be-column be-col-3">
+   <h3>Second be-column Text</h3>
    <p>You can change this text with some information related to the project...</p>
      </div>
      
-     <div class="column col-3">
-   <h3>Third column Text</h3>
+     <div class="be-column be-col-3">
+   <h3>Third be-column Text</h3>
    <a href="#">Who we are</a><br> 
    <a href="#">Our services</a><br> 
    <a href="#">Contact us</a><br> 

@@ -1,4 +1,8 @@
-/* *********** CSS for SSG created by iturbides.dev ************** */
+/* *********** BeCSS for SSG created by iturbides.dev **************
+ * BeCSS is a modular Style Sheet with categorizing rules
+ * based in normalize.css and the style guide SMACSS.
+ * Is simple to use and ease to modify...
+ * */
 
 /* ROOT CONFIGURATION
 Primary configuration variables
@@ -45,33 +49,48 @@ for Colors Palette, Font Style and Size
 	--divider-color: #BDBDBD;
 }
 
-/* *********** GLOBAL CONFIGURATION ***********
-General html tags, options, labels, etc.
-*/
+/* *********** GLOBAL CONFIGURATION ************/
 
-
-article,
-hr,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-nav,
-section,
+article, hr, aside, details,
+figcaption, figure, footer,
+header, main, nav, section,
 summary {
   display: block;
 }
-
-
-
 
 * {
 	margin: 0;
 	padding: 0;
 }
+/* Remove the gray background
+ * on active links in IE 10. */
+a { background-color: transparent; }
+
+
+/*** 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in
+ * Chrome, Edge, IE, Opera, and Safari.  */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/** * 1. Correct the inheritance and scaling
+ * of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers. */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/** Add the correct font size in all browsers. */
+
+small { font-size: 80%; }
 
 html {
   position: relative;
@@ -86,6 +105,33 @@ body {
 	margin: 0;
 }
 
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/* Remove the inner border and padding in Firefox.*/
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+textarea { overflow: auto;}
+
+/*** 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10. */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
 ul {
 	list-style-type: none;
 	margin: 0;
@@ -97,45 +143,21 @@ h1, h2, h3, h4, h5, h6 {
 	text-decoration: none;
 }
 
-h1 {
-	font-size: var(--header-1-size);
-}
-
-h2 {
-	font-size: var(--header-2-size);
-}
-
-h3 {
-	font-size: var(--header-3-size);
-}
-
-h4 {
-	font-size: var(--header-4-size);
-}
+h1 { 	font-size: var(--header-1-size);}
+h2 {	font-size: var(--header-2-size);}
+h3 { 	font-size: var(--header-3-size);}
+h4 { 	font-size: var(--header-4-size);}
 
 h1, h2 {
 	line-height: .9em;
 	color: var(--primary-color);
 }
 
-
-h2 a:visited, h2 a:link {
-	color: var(--primary-color);
-	text-decoration: none;
-}
-
-
-p a:link {
-	color: var(--primary-color);
-	text-decoration: none;
-}
-
+h3, h4, h5, h6,
+h2 a:visited,
+h2 a:link,
+p a:link,
 p a:visited {
-	color: var(--primary-color);
-	text-decoration: none;
-}
-
-h3, h4, h5, h6 {
 	color: var(--primary-color);
 	text-decoration: none;
 }
@@ -145,7 +167,6 @@ body {
  	color: var(--secondary-text-color);
 }
 
-
 p {
 		font-family: var(--primary-font-family);
    	font-style: normal;
@@ -154,21 +175,17 @@ p {
 		color: var(--dark-primary-color);
 }
 
-/*
- * Remove default fieldset styles.
- */
-
+/* Remove default fieldset styles. */
 fieldset {
   border: 0;
   margin: 0;
   padding: 0;
 }
 
-/*
- * change style to default horizontal rule
- */
+/* change style to default horizontal rule */
 
 hr {
+	box-sizing: content-box;
   height: 1px;
   border: 0;
   border-top: 1px solid var(--primary-color);
@@ -176,13 +193,19 @@ hr {
   padding: 0;
 }
 
-/* MENU */
-/* Style for responsive menu */
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* MENU 
+* Style for responsive menu */
 
 .nav {
     overflow: hidden;
 		background-color: var(--dark-primary-color);
 }
+
 /* color and position for menu text */
 .nav a {
     float: left;
@@ -190,9 +213,8 @@ hr {
     display: block;
 		color: var(--light-primary-color);
 }
-.nav #menu-toggle {
-    display: none;
-}
+
+.nav #menu-toggle { display: none;}
 
 @media screen and (max-width: 600px) {
     .nav a:not(:first-child) {
@@ -245,17 +267,17 @@ hr {
 }
 
 /* FOOTER
- * section in 3 responsive columns
+ * section in 3 responsive be-columns
  * Columns are optional
  * */
-footer {
+.be-footer {
   left: 0;
   bottom: 0;
   width: 100%;
 	background-color: var(--dark-primary-color);
 }
 
-footer p, footer a {
+.be-footer p, .be-footer a {
 	color: var(--light-primary-color);
 }
 
@@ -264,49 +286,118 @@ footer p, footer a {
  * section for Column,
  * images and grid-conainer */
 
-.grid-container {
+.be-container {
 	display: flex;
 	flex-wrap: wrap;
-}
-.column {
-	float: left;
-	padding: 0 5px 5px;
-	margin: 5px 5px;
+	flex-direction: row;
 }
 
+.be-column {
+	float: left;
+	padding: 5px 5px 5px;
+	margin: 5px 5px;
+}
+/*
 @media screen and (max-width: 700px) {
-	.column {
+	.be-column {
 		flex: 100%;
 		max-width: 100%;
 	}
 }
+*/
+
+/* Responsive classes for 12 be-column Flex Box
+ */
+.be-col-1 { 	flex: 8.33%; }
+.be-col-2 { 	flex: 16.66%; }
+.be-col-3 { 	flex: 24.99%; }
+.be-col-4 { 	flex: 33.32; }
+.be-col-5 {		flex: 41.65%; }
+.be-col-6 { 	flex: 49.98%; }
+.be-col-7 { 	flex: 58.31%; }
+.be-col-8 { 	flex: 66.64%; }
+.be-col-9 { 	flex: 74.97%; }
+.be-col-10 {	flex: 83.33%; }
+.be-col-11 {	flex: 91.63%; }
+.be-col-12 {	flex: 100%; }
+
+/* Break point for colums 6 to 12 */
+@media screen and (max-width: 55em) {
+	.be-col-7, .be-col-8, .be-col-9, .be-col-10, .be-col-11, .be-col-12 {
+		flex: 100%;
+	}
+}
+
+@media screen and (max-width: 30em) {
+	.be-col-6 .be-col-5, .be-col-4, .be-col-3, .be-col-2, .be-col-1 {
+		flex: 100%;
+	}
+}
 
 
-/* Responsive classes for 10 column grid style */
-.col-1 { 	width: 8%; }
-.col-2 { 	width: 18%; }
-.col-3 { 	width: 29%; }
-.col-4 { 	width: 37.5; }
-.col-5 { 	width: 48%; }
-.col-6 { 	width: 57%; }
-.col-7 { 	width: 67%; }
-.col-8 { 	width: 77%; }
-.col-9 { 	width: 87%; }
-.col-10 {	width: 100%; }
+/* HIDDEN classes for hide elements */
 
-/* Class that hide column below 700px */
+/* Class that hide a be-column below 500 to 900 */
+@media screen and (max-width: 500px) {
+	.be-hidden-below-500 {
+		display: none;
+	}
+}
 @media screen and (max-width: 700px) {
-	.hidden-small {
+	.be-hidden-below-700 {
+		display: none;
+	}
+}
+@media screen and (max-width: 900px) {
+	.be-hidden-below-900 {
+		display: none;
+	}
+}
+
+
+/* Class that hide column or anything above 500 to 900 */
+@media screen and (min-width: 500px) {
+	.be-hidden-above-500 {
+		display: none;
+	}
+}
+@media screen and (min-width: 700px) {
+	.be-hidden-above-700 {
+		display: none;
+	}
+}
+@media screen and (min-width: 900px) {
+	.be-hidden-above-900 {
 		display: none;
 	}
 }
 
 
 
-.responsive {
+.be-responsive {
 	width: 100%;
 	height: auto;
 }
+
+/* Classes for align elements and texts center right */
+.be-align-center {
+	display: block;
+	margin: auto;
+}
+
+.be-align-right {
+	position: relative;
+	float: right;
+}
+.be-text-right {	text-align: right; }
+.be-text-center { text-align: center; }
+
+/* Effect on pictures */
+
+.be-ef-blur { filter: blur(5px); }
+.be-ef-contrast { filter: contrast(200%);}
+.be-ef-sepia { filter: sepia(100%); }
+.be-ef-bw { filter: greyscale(100%); }
 
 /* CONTENT styles
  * blockquote, ul and ol list */
@@ -332,7 +423,7 @@ ul li {
 
 /*Buttons */
 
-.button {
+.be-btn {
   padding: 10px 15px;
   text-align: center;
   text-decoration: none;
@@ -343,53 +434,54 @@ ul li {
 	border: none;
 }
 
-.be-primary {
+.be-primary { /* based on the root colors */
   background-color:var(--dark-primary-color);
   color: var(--light-primary-color);
 }
-
-.be-inverse {
+.be-inverse { /* based on root colors */
 	background-color: var(--light-primary-color);
 	color: var(--dark-primary-color);
 }
-.be-danger {
-  background-color: red;
-  color: var(--light-primary-color);
-}
-.be-alert {
-  background-color: yellow;
-  color: var(--dark-primary-color);
-}
+/* Colors based on CSS labels standard */
+.be-warning { background-color: #ff9800; color: #000000; }
+.be-danger {  background-color: #f44336; color: #ffffff; }
+.be-info {		background-color: #2196f3; color: #000000; }
+.be-success {	background-color: #04aa6d; color: #ffffff; }
 
-.be-hover:hover {
-	transition-duration: 0.4s;
-	background-color: var(--primary-color);
-	color: var(--light-primary-color);
-}
-
-/* Buttons by colors
+/* Colors classes for background
  * A selection of commons colors
+ * that can be apply to buttons, divs,
+ * nav and others
  */ 
-.be-blue {   		background-color: #3273dc; }
-.be-red  {   		background-color: #ff4000; }
-.be-orange { 		background-color: #ff8000; }
-.be-yellow { 		background-color: #ffff00; }
-.be-green {  		background-color: #40ff00; }
-.be-navy { 	 		background-color: #0000ff; }
-.be-violet { 		background-color: #8000ff; }
-.be-grey   { 		background-color: #999999; }
-.be-dark-grey { background-color: #404040; }
-.be-black { 		background-color: #000000; }
-/* Change the brightness of the buttons on hover */
-.be-blue:hover {		filter: brightness(130%);}
-.be-red:hover {			filter: brightness(160%);}
-.be-orange:hover {	filter: brightness(130%);}
-.be-yellow:hover {	filter: brightness(90%);}
-.be-green:hover {		filter: brightness(170%);}
-.be-navy:hover {		filter: brightness(130%);}
-.be-violet:hover {	filter: brightness(130%);}
-.be-grey:hover {		filter: brightness(130%);}
-.be-black:hover {		filter: brightness(130%);}
+.be-blue {   		background-color: #3273dc; color: #ffffff; }
+.be-red  {   		background-color: #ff4000; color: #ffffff; }
+.be-orange { 		background-color: #ff8000; color: #000000; }
+.be-yellow { 		background-color: #ffff00; color: #000000; }
+.be-green {  		background-color: #40ff00; color: #000000; }
+.be-navy { 	 		background-color: #0000ff; color: #ffffff; }
+.be-violet { 		background-color: #8000ff; color: #ffffff; }
+.be-grey   { 		background-color: #999999; color: #000000; }
+.be-dark-grey { background-color: #404040; color: #ffffff; }
+.be-black { 		background-color: #000000; color: #ffffff; }
+
+/* Change the brightness of any background color
+ * Can be used for buttons and others */
+.be-hover:hover {
+	filter: brightness(150%);
+	transition-duration: 0.4s;
+}
+
+.be-shadow {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+/* SIZE sizes classes */
+.be-size-10 { max-width: 10em !important; }
+.be-size-20 { max-width: 20em !important; }
+.be-size-30 { max-width: 30em !important; }
+.be-size-40 { max-width: 40em !important; }
+.be-size-50 { max-width: 50em !important; }
 
 
 /* TABLE */
@@ -443,6 +535,7 @@ input::-moz-focus-inner {
 .be-rounded {
 	border-radius: 8px;
 }
+
 .be-circle {
 	border-radius: 50%;
 }
@@ -501,3 +594,35 @@ transition: opacity 400ms ease-in;
 	box-shadow: 1px 1px 3px #000;
 }
 .close:hover { background: var(--primary-color); }
+
+/* ELEMENTS design
+ * cards */
+
+/* Add shadows to create the "card" effect */
+.be-card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+	max-width: 15em; /* default card size */
+}
+
+/* Adjuts the size of image in the card */
+.be-card img  { width: 100%; }
+
+/* On mouse-over, add a deeper shadow */
+.be-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.be-card-container {
+  padding: 2px 16px;
+}
+
+/*
+@media screen and (max-width: 700px) {
+	.be-card-container {
+		flex: 100%;
+		max-width: 100%;
+	}
+}
+*/
