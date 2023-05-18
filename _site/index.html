@@ -13,8 +13,36 @@
   </head>
 
 	<body>
-    <!-- Responsive menu -->
-  <nav class="nav" id="nav">
+    
+  <!-- Top Menu -->
+<div class="be-nav-menu">
+<!-- (A) MENU WRAPPER -->
+<nav class="be-nav">
+
+  <a href="/"><img src="/images/logo.png" alt="your logo description"></a>
+  <!-- (B) THE HAMBURGER -->
+  <label for="be-nav-burger">&#9776;</label>
+  <input type="checkbox" id="be-nav-burger"/>
+  
+
+
+  <!-- (C) MENU ITEMS -->
+  <div id="be-nav-items">
+    <!-- <a href="/"><img src="/images/logo.png" alt="your logo description"></a> -->
+    <a href="#">First</a>
+    <a href="#">Second</a>
+    <a href="#">Third</a>
+    <a href="#">Forth</a>
+  </div>
+  </nav>
+  </div>
+  <!-- End of Top Menu -->   
+
+
+
+
+
+   <!--  <nav class="nav" id="nav">
     <a href="#home"><img src="/images/logo.png" alt="your logo description"></a>
     <a href="#menu-item-1">Menu Item 1</a>
     <a href="#menu-item-2">Menu Item 2</a>
@@ -28,16 +56,20 @@
 
   <!-- Main content come here from others pages -->
     <div class="be-content">
-    
-<h1>Welcolme to this project...</h1>
-<p>In this starter Eleventy project you the followin:</p>
+    <div class="be-container">
+  <div class="be-column be-col-3">
+<h1>Welcolme to this project...</h1><br>
+<p class="be-capital">Part of the idea upon the time this And And this is a simple paragraphtAnd this is a simple paragraphAnd this is a simple pAnd And this is a simple paragraphtAnd this is a simple paragraphAnd this is a simple pAnd And this is a simple paragraphtAnd this is a simple paragraphAnd this is a simple pstarter Eleventy project you the followin:In this And And this is a simple paragraphtAnd this is a simple paragraphAnd this is a simple pAnd And this is a simple paragraphtAnd this is a simple paragraphAnd this is a simple pAnd And this is a simple paragraphtAnd this is a simple paragraphAnd this is a simple </p><br>
+  </div>
+</div>
 
-<h1>This is H1 text</h1><br>
+<h1>Be nice, be free, beCSS...</h1>
+<p>A simple and light style sheet as a starting point...</p><br>
 <h2>This is H2 text</h2><br>
 <h3>This is H3 text</h3><br>
 <h4>This is H4 text</h4><br>
 
-<p>And this is a simple paragraph</p>
+<p>And And this is a simple paragraphtAnd this is a simple paragraphAnd this is a simple paragraphAnd this is a simple paragraphAnd this is a simple paragraphAnd this is a simple paragraphAnd this is a simple paragraphAnd this is a simple paragraphhis is a simple paragraph</p>
 
 <blockquote>This is a Blocquote text</blockquote><br>
 
@@ -80,7 +112,7 @@
   </div>
 
 
-  <div class="be-column be-col-4">
+  <div class="be-column be-col-4 be-card">
     <h3>Buttons by Root Classes</h3>
 <button class="be-btn be-primary">Button</button>
 <button class="be-btn be-primary be-rounded be-hover">Button</button>
@@ -100,7 +132,7 @@
 <div class="be-container">
 
   <div class="be-column be-col-4">
-    <div class="be-card be-size-20 be-align-center">
+    <div class="be-card be-size-20 be-align-center be-rounded">
   <img src="/images/card.svg" alt="Card Person">
   <div class="be-card-container">
     <h4><b>Mary Doe</b></h4>
@@ -111,7 +143,7 @@
 
 <div class="be-column be-col-4">
     <div class="be-card be-size-20 be-align-center">
-  <img src="/images/card.svg" alt="Card Person">
+  <img src="/images/card.svg" alt="Card Person" class="be-rounded">
   <div class="be-card-container">
     <h4><b>Mary Doe</b></h4>
     <p>This card use the .be-size-20 class</p>

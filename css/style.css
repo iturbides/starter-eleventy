@@ -198,73 +198,6 @@ pre {
   font-size: 1em;
 }
 
-/* MENU 
-* Style for responsive menu */
-
-.nav {
-    overflow: hidden;
-		background-color: var(--dark-primary-color);
-}
-
-/* color and position for menu text */
-.nav a {
-    float: left;
-    margin: 10px;
-    display: block;
-		color: var(--light-primary-color);
-}
-
-.nav #menu-toggle { display: none;}
-
-@media screen and (max-width: 600px) {
-    .nav a:not(:first-child) {
-      display: none; }
-    .nav a#menu-toggle {
-      float: right;
-      display: block; } 
-}
-
-@media screen and (max-width: 600px) {
-    .nav.nav--open {
-      position: relative; }
-    .nav.nav--open #menu-toggle {
-      position: absolute;
-      right: 0;
-      top: 0; }
-    .nav.nav--open a {
-      float: none;
-      display: block;
-      text-align: left; } 
-}
-/* In responsive menu, the burger
- * style with inverse color
- */
-.bar-1, .bar-2, .bar-3 {
-    width: 21px;
-    height: 3px;
-    background-color: var(--light-primary-color);
-    margin: 4px 0;
-    transition: 0.3s;
-}
-
-.menu-toggle--open .bar-1 {
-    transform: translate(0, 7px) rotate(-45deg);
-}
-
-.menu-toggle--open .bar-2 {
-    opacity: 0;
-}
-
-.menu-toggle--open .bar-3 {
-    transform: translate(0, -7px) rotate(45deg);
-}
-
-
-/* Logo top menu */
-
-.nav img {
-	max-width: 35px;
-}
 
 /* FOOTER
  * section in 3 responsive be-columns
@@ -541,6 +474,31 @@ input::-moz-focus-inner {
 }
 
 
+/* Capitalize the first letter
+ * Note: depending or you font weight
+ * and font size the line-height must
+ * be adjusted
+ */
+
+@media screen and (min-width: 625px) {
+  .be-capital:first-of-type::first-letter {
+	display:block;
+	font-size: 6em;
+	float: left;
+	line-height: 6rem;
+	padding-right: .5rem;
+	margin-bottom: 0rem;
+	font-weight: 700;
+	text-shadow: 3px 3px 2px grey;
+	color: black;
+	position:top;
+    }
+}
+
+
+
+
+
 /* CODE element */
 
 /* MODAL */
@@ -618,11 +576,83 @@ transition: opacity 400ms ease-in;
   padding: 2px 16px;
 }
 
-/*
-@media screen and (max-width: 700px) {
-	.be-card-container {
-		flex: 100%;
-		max-width: 100%;
-	}
+
+
+/* new menu here */
+
+/* [ON BIG SCREEN] */
+/* (A) WRAPPER */
+.be-nav {
+  width: 100%;
+  background: black;
 }
-*/
+
+/* (B) HORIZONTAL MENU ITEMS */
+#be-nav-items { 
+	display: inline-flex;
+	position: relative;
+	z-index: 1;
+	background-color: black;
+}
+
+#be-nav-items a {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+#be-nav-items a:hover { background: #af0d0d; }
+
+/* prevent background logo change color on hover 
+#be-nav-items a:hover:first-of-type {
+	background: black;
+} */
+
+/* (C) HIDE HAMBURGER */
+.be-nav label, #be-nav-burger { display: none; }
+
+/* [ON SMALL SCREENS] */
+@media screen and (max-width: 768px){
+  /* (A) BREAK INTO VERTICAL MENU */
+  #be-nav-items a {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-top: 1px solid #333;
+  }
+
+  /* (B) SHOW HAMBURGER ICON */
+  .be-nav label {
+    /* display: inline-block; */
+    color: white;
+    background: #a02620;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+		float: right;
+		display: block;
+		position: relative;
+		z-index: 3;
+  }
+
+  /* (C) TOGGLE SHOW/HIDE MENU */
+  #be-nav-items { display: none; }
+  .be-nav input:checked ~ #be-nav-items { display: block; }
+}
+
+.be-nav-menu { 
+	background-color: black;
+	height: 49px;
+}
+.be-nav img {
+	max-width: 80px;
+	padding: 9px 0 0 9px;
+	display: inline-flex;
+	position: relative;
+
+}
+
+
