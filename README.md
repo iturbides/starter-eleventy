@@ -1,4 +1,4 @@
-# Starter Eleventy Skeleton
+# Starter Eleventy Skeleton with beCSS stylesheet
 
 ### An Starter base for Eleventy's projects
 
@@ -8,7 +8,7 @@ I prepared this structure because I had to do this repetitive work every time I 
 
 What Include?
 
-1. css folder with basic css configuration
+1. css folder with basic css configuration / Also include becss www.becss.dev
 2. data folder with json file ready for complementation
 3. images folder with favico example
 4. include folder with main.liquid

@@ -17,76 +17,23 @@ title: Default title
 
 	<body>
     
-  <!-- Top Menu -->
-<div class="be-nav-menu">
-<!-- (A) MENU WRAPPER -->
-<nav class="be-nav">
-
-  <a href="/"><img src="/images/logo.png" alt="your logo description"></a>
-  <!-- (B) THE HAMBURGER -->
-  <label for="be-nav-burger">&#9776;</label>
-  <input type="checkbox" id="be-nav-burger"/>
-  
-
-
-  <!-- (C) MENU ITEMS -->
-  <div id="be-nav-items">
-    <!-- <a href="/"><img src="/images/logo.png" alt="your logo description"></a> -->
-    <a href="#">First</a>
-    <a href="#">Second</a>
-    <a href="#">Third</a>
-    <a href="#">Forth</a>
-  </div>
-  </nav>
-  </div>
-  <!-- End of Top Menu -->   
-
-
-
-
-
-   <!--  <nav class="nav" id="nav">
-    <a href="#home"><img src="/images/logo.png" alt="your logo description"></a>
-    <a href="#menu-item-1">Menu Item 1</a>
-    <a href="#menu-item-2">Menu Item 2</a>
-    <a href="#menu-item-3">Menu Item 3</a>
-    <a href="javascript:void(0);" id="menu-toggle" onclick="togglemenu()">
-      <div class="bar-1"></div>
-      <div class="bar-2"></div>
-      <div class="bar-3"></div>
-    </a>
-  </nav>
-
-  <!-- Main content come here from others pages -->
-    <div class="be-content">
-    {{ content }}
-    </div>
-   
-   <!-- Footer content below -->
- <footer class="be-footer">
-   <div class="be-container">
-
-     <div class="be-column be-col-4">
-   <h3>Firs be-column Text</h3>
-   <p>Some text option here abour the project...</p>
-     </div>
-     
-     <div class="be-column be-col-3">
-   <h3>Second be-column Text</h3>
-   <p>You can change this text with some information related to the project...</p>
-     </div>
-     
-     <div class="be-column be-col-3">
-   <h3>Third be-column Text</h3>
-   <a href="#">Who we are</a><br> 
-   <a href="#">Our services</a><br> 
-   <a href="#">Contact us</a><br> 
-     </div>
-
+    <!-- Top Menu -->
+    <nav class="be-nav-menu">
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="be-burger"></label>
+   <div class="be-nav">
+        <ul class="be-nav-items">
+            <li><a href="/" class="be-not-color"><img src="images.png" alt="image"></a>
+            </li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
    </div>
- </footer> 
- 
- <!-- Call the js file -->
- <script type="text/javascript" src="{{ data.mainjs }}"></script> 
+    </nav>
+
+    {{ content }}
+
   </body>
 </html>
