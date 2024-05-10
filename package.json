@@ -1,6 +1,6 @@
 {
   "name": "starter-eleventy",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "Base kit for eleventy but include eleventy",
   "main": ".eleventy.js",
   "scripts": {
